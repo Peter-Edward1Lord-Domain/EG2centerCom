@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- CHANGE THESE SNIPPETS FOR SEARCH ENGINE RESULTS -->
+    <title>Curated Video Highlights & Playlists | EG2 Center</title>
+    <meta name="description" content="Explore our hand-picked collection of video streams, community highlights, and playlists curated directly by the EG2 Center mainframe team.">
+    
+    <!-- GOOGLE STRUCTURED VIDEO OBJECT DATA (SEO BOOST) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "VideoObject",
+      "name": "EG2 Center Featured Video Stream",
+      "description": "A hand-picked selection of media content curated by the EG2 Center community.",
+      "thumbnailUrl": "https://youtube.com",
+      "uploadDate": "2026-09-24T00:00:00+00:00",
+      "embedUrl": "https://youtube.com"
+    }
+    </script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #21ADA8;
+            color: #ffffff;
+            margin: 0;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+        }
+        h1 {
+            color: #ff3333;
+            font-size: 2.4rem;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            color: #aaaaaa;
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+        }
+        .video-card {
+            background-color: #1f1f1f;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+            text-align: left;
+        }
+        .video-card h2 {
+            margin-top: 0;
+            color: #fff;
+            font-size: 1.3rem;
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+        }
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* Perfect 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        .video-text {
+            color: #cccccc;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            margin: 10px 0 0 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Curated Video Streams</h1>
+        <p class="subtitle">Welcome to the hub. Enjoy our hand-picked selection of videos and streaming playlists below.</p>
+
+        <!-- SLOT 1: FEATURED INDIVIDUAL VIDEO -->
+        <div class="video-card">
+            <h2>1. Featured Community Spotlight</h2>
+            <div class="video-wrapper">
+                <!-- SWAP 'YOUR_VIDEO_ID' WITH THE 11 CHARACTERS AT THE END OF YOUR YOUTUBE URL -->
+                <iframe src="https://youtube.com" loading="lazy" allowfullscreen></iframe>
+            </div>
+            <p class="video-text">
+                Type a short 2-3 sentence summary of this video here. Having actual text descriptive sentences sitting right next to your video embed box is vital because Google's text spiders use it to index the page context.
+            </p>
+        </div>
+
+        <!-- SLOT 2: FULL ROLLING YOUTUBE PLAYLIST -->
+        <div class="video-card">
+            <h2>2. Mainframe Automated Playlist Stream</h2>
+            <div class="video-wrapper">
+                <!-- SWAP 'YOUR_PLAYLIST_ID' WITH THE LONG STRING AFTER 'list=' IN YOUR PLAYLIST URL -->
+                <iframe src="https://www.youtube.com/playlist?list=PLC156A9FDA2561060" loading="lazy" allowfullscreen></iframe>
+            </div>
+            <p class="video-text">
+                This block loads an entire running playlist. Users can tap the menu icon in the upper-right corner of the video window to view all clips. When you add new videos on YouTube, they update here automatically without editing this code.
+            </p>
+        </div>
+    </div>
+
+</body>
+</html>
