@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EG2CENTER | Mainframe | EnternetGlbal</title>
+    <style>
+        body { background-color: #0b0f19; color: #f3f4f6; font-family: monospace; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
+        .container { text-align: center; border: 1px solid #1f2937; padding: 40px; background-color: #111827; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); max-width: 400px; width: 100%; }
+        h1 { color: #3b82f6; font-size: 24px; margin-bottom: 10px; letter-spacing: 2px; }
+        p { color: #9ca3af; font-size: 14px; margin-bottom: 25px; }
+        input[type="email"] { width: 90%; padding: 10px; margin-bottom: 15px; background-color: #1f2937; border: 1px solid #374151; color: #fff; border-radius: 4px; font-family: monospace; text-align: center; }
+        input[type="submit"] { width: 95%; padding: 10px; background-color: #3b82f6; border: none; color: #fff; border-radius: 4px; font-weight: bold; cursor: pointer; font-family: monospace; }
+        input[type="submit"]:hover { background-color: #2563eb; }
+        
+        /* This completely hides the Formspree response layer from the screen */
+        iframe { display: none; width: 0; height: 0; border: none; }
+    </style>
+</head>
+<body>
+<body bgcolor="#21ADA8" text="#FFFFCC">
+<center><img src="graphics/eg2center-ENTERNETGLOBAL-profile_header.gif">
+    <div class="container">
+        <h1>EG2CENTER.COM</h1>
+        <p>[ N-M-V LOCOMOTIVE CORE ACTIVE ]</p>
+        <p>30-Year Provenance Reclaimed. Enter your credentials to request clearance. eg2 is ENTERNETGLOBAL</p>
+        
+        <!-- The target attribute forces the form to submit quietly inside the hidden iframe below -->
+        <form action="https://formspree.io/f/mkjgnqak" method="POST" target="hidden-iframe" onsubmit="routeToSuccess()">
+            <input type="email" name="email" placeholder="ENTER EMAIL ADDRESS" required>
+            <input type="submit" value="REQUEST ACCESS LINK">
+        </form>
+    </div>
+
+    <!-- The invisible destination window -->
+    <iframe name="hidden-iframe" id="hidden-iframe"></iframe>
+
+    <script>
+        function routeToSuccess() {
+            // The exact millisecond the user clicks submit, the page snaps to your custom success layout
+            setTimeout(function() {
+                window.location.href = "success.html";
+            }, 300); // 300ms buffer gives the form enough time to dispatch the payload to Formspree
+        }
+    </script>
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495" integrity="sha512-iIg7k2xntmwu6/uSb5tpc/hySgZc4eoL31yB29W6tJFo2akwjPWcEqnCEdJvGexCL0KEQwVYv5BlowfhVz26hg==" data-cf-beacon='{"version":"2024.11.0","token":"90d4814eb9fd496888b1a87212b5a2d9","r":1,"spa":2}' crossorigin="anonymous"></script>
+</body>
+</html>
