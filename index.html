@@ -107,6 +107,61 @@
             color: #666666;
         }
 
+/* --- TACTICAL CYBERPUNK BUTTON LAYER --- */
+.cyber-button-container {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 320px;   
+    height: 85px;   
+    margin: 20px auto;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: #05080a; /* Obsidian black core */
+    border: 2px solid #b0b7bd; /* Brushed silver framing */
+    border-radius: 4px;        
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4), 
+                inset 0 0 10px rgba(176, 183, 189, 0.2); 
+    transition: transform 0.2s cubic-bezier(0.2, 0.8, 0.2, 1), border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cyber-button-container:hover {
+    transform: scale(1.04);
+    border-color: #ffffff; /* Polished chrome shift */
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6), 0 0 15px rgba(0, 255, 0, 0.3);
+}
+
+.lottie-hardware-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none; 
+    opacity: 0.85; 
+    filter: drop-shadow(0 0 6px rgba(0, 255, 0, 0.5)); 
+}
+
+.cyber-button-text {
+    position: relative;
+    z-index: 2;
+    color: #00ff00; /* Neon Matrix Green */
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.15rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-shadow: 0 0 5px #00ff00, 0 0 10px rgba(0, 255, 0, 0.4);
+    transition: all 0.2s ease;
+}
+
+.cyber-button-container:hover .cyber-button-text {
+    color: #ffffff; 
+    text-shadow: 0 0 8px #00ff00, 0 0 20px #00ff00; 
+}
+
         /* CSS Pulsing Core Mechanics */
         
         /* 1. Subtle, inviting pulsing effect for your classic header graphic */
@@ -213,15 +268,19 @@
         
         <!-- YOUR 1999 HEADERS/GRAPHICS GO HERE -->
         <h1>WELCOME TO EG2CENTER</h1>
-        <p><em>Historical Digital Preservation Protocol Space</em></p>
+        <p><em>historical digital Preservation Protocol hub</em></p>
 
         <!-- ACTION A: New Modern Website Link Container -->
         <div>
             <!-- The Image Button Optimized for SEO with clean alt tags -->
             <a href="indexnew.html" class="pulse-subtle">
-<a href="indexnew.html" class="pulse-heartbeat">
-                <img src="your-new-button-image.jpg" class="modern-button-img" alt="Click here to enter" />
-            </a>
+
+    <a href="indexnew.html" class="cyber-button-container">
+        <!-- The vector layer canvas that draws the green circuit machinery -->
+        <div class="lottie-hardware-bg"></div>
+        <span class="cyber-button-text">ACCESS CORE SITE</span>
+    </a>
+</div>
             
             
             <p class="seo-text-bridge">
@@ -259,6 +318,22 @@ Click here to go directly to the new modern EG2Center website.<br>
 <div style="width: 100%; max-width: 100%; box-sizing: border-box; padding: 10px; text-align: center; clear: both;">
     <a href="enternetglobal-index.htm"  class="pulse-subtle"> <a href="enternetglobal-index.htm" class="pulse-heartbeat"><img src="graphics/eg2center-ENTERNETGLOBAL-profile_header.gif" width="100%" alt="Footer Logo"></a>
 </div>
+
+<!-- Load the Lottie Engine -->
+<script src="https://cloudflare.com"></script>
+
+<script>
+    // Automatically wakes up and draws the glowing hardware wires inside the button core
+    document.querySelectorAll('.lottie-hardware-bg').forEach(container => {
+        lottie.loadAnimation({
+            container: container,
+            renderer: 'svg',
+            loop: true,
+            autoplay: true,
+            path: 'https://lottiefiles.com' 
+        });
+    });
+</script>
 
 </body>
 </html>
