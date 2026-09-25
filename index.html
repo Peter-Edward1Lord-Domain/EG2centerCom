@@ -107,25 +107,34 @@
             color: #666666;
         }
 
-/* CSS Pulsing Core Mechanics */
+        /* CSS Pulsing Core Mechanics */
         
         /* 1. Subtle, inviting pulsing effect for your classic header graphic */
         .pulse-subtle {
-            animation: pulse-grow 3s infinite ease-in-out;
             display: inline-block;
+            animation: pulse-grow 3s infinite ease-in-out;
+        }
+        .pulse-subtle img {
+            display: block;
         }
 
         /* 2. Rhythmic heartbeat pulsing glow for the keyboa-glyph action button */
         .pulse-heartbeat {
+            display: inline-block; /* Crucial: Allows dimensions and transform states to work */
             animation: pulse-glow-heartbeat 2s infinite ease-in-out;
-            display: inline-block;
             cursor: pointer;
-            border-radius: 4px;
             transition: transform 0.2s ease;
+            text-decoration: none;
+        }
+        
+        /* Forces the image inside the link to obey the parent animation container */
+        .pulse-heartbeat img {
+            display: block;
+            border-radius: 4px;
         }
         
         .pulse-heartbeat:hover {
-            transform: scale(1.05);
+            transform: scale(1.05) !important;
         }
 
         /* 3. Dedicated style for the modern website text funnel link */
@@ -134,7 +143,7 @@
             max-width: 750px;
             padding: 15px;
             border: 1px dashed #FFFFCC;
-            background-color: rgba(0, 0, 0, 0.2);
+            background-color: rgba(0, 0, 0, 0.4); /* Darkened slightly for better contrast */
             font-family: Arial, sans-serif;
             font-size: 1.15rem;
             line-height: 1.5;
@@ -160,27 +169,28 @@
 
         @keyframes pulse-glow-heartbeat {
             0% { 
-                transform: scale(0.97); 
-                box-shadow: 0 0 5px rgba(255, 255, 204, 0.2);
+                transform: scale(0.96); 
+                filter: drop-shadow(0 0 2px rgba(255, 255, 204, 0.3));
             }
-            35% { 
-                transform: scale(1.03); 
-                box-shadow: 0 0 25px rgba(255, 255, 204, 0.8);
-            }
-            45% { 
-                transform: scale(1); 
-                box-shadow: 0 0 10px rgba(255, 255, 204, 0.4);
-            }
-            55% { 
+            30% { 
                 transform: scale(1.04); 
-                box-shadow: 0 0 30px rgba(255, 255, 204, 0.9);
+                filter: drop-shadow(0 0 18px rgba(255, 255, 204, 0.9));
+            }
+            40% { 
+                transform: scale(1); 
+                filter: drop-shadow(0 0 8px rgba(255, 255, 204, 0.5));
+            }
+            50% { 
+                transform: scale(1.05); 
+                filter: drop-shadow(0 0 22px rgba(255, 255, 204, 1));
             }
             100% { 
-                transform: scale(0.97); 
-                box-shadow: 0 0 5px rgba(255, 255, 204, 0.2);
+                transform: scale(0.96); 
+                filter: drop-shadow(0 0 2px rgba(255, 255, 204, 0.3));
             }
         }
     </style>
+
 
 
 </head>
@@ -196,7 +206,7 @@
         <div>
             <!-- The Image Button Optimized for SEO with clean alt tags -->
             <a href="indexnew.html" class="modern-button-link">
-                <img src="your-new-button-image.jpg" class="modern-button-img" alt="Click here to enter the all-new modern EG2Center web portal" />
+                <img src="your-new-button-image.jpg" class="modern-button-img" alt="Click here to enter" />
             </a>
             
             
