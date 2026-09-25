@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyberpunk Interface</title>
+    
+    <!-- Load the Ultra-Fast, Secure Lottie Framework Player Engine -->
+    <script src="https://cloudflare.com"></script>
+
+    <style>
+        body {
+            background-color: #05080a; /* Deep mainframe cockpit dark background */
+            padding: 50px;
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+        }
+
+        /* --- THE AUTOMATED CYBERPUNK BUTTON CONTAINER --- */
+        .cyber-button-container {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 320px;   /* Standard crisp dashboard width */
+            height: 85px;   /* Room for futuristic hardware frames */
+            margin: 20px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: transform 0.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+        }
+
+        /* Hover Interaction: Makes the entire machinery container subtly flex */
+        .cyber-button-container:hover {
+            transform: scale(1.03);
+        }
+
+        /* The Hidden Lottie Code Engine Layer playing underneath the words */
+        .lottie-hardware-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            pointer-events: none; /* Passes clicks directly through to the text link */
+            filter: drop-shadow(0 0 8px rgba(0, 255, 0, 0.6)); /* Matrix green glow aura */
+        }
+
+        /* The Automated Text Layer floating on top of the machinery animation */
+        .cyber-button-text {
+            position: relative;
+            z-index: 2;
+            color: #00ff00; /* Neon Terminal Green */
+            font-size: 1.15rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-shadow: 0 0 5px #00ff00, 0 0 10px rgba(0, 255, 0, 0.5);
+            transition: all 0.2s ease;
+        }
+
+        .cyber-button-container:hover .cyber-button-text {
+            color: #21ADA8; /* Instantly shifts text color to your brand Aquamarine on hover */
+            text-shadow: 0 0 8px #21ADA8, 0 0 15px rgba(33, 173, 168, 0.8);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- BUTTON 1: Go to Modern Portal (Simply swap the link path and text inside) -->
+    <a href="index-new.html" class="cyber-button-container">
+        <!-- The Infinite Vector Hardware Animation Canvas Layer -->
+        <div class="lottie-hardware-bg" data-animation="cyber-circuit"></div>
+        <!-- TYPE ANY WORDS YOU WANT HERE -->
+        <span class="cyber-button-text">ACCESS CORE SITE</span>
+    </a>
+
+    <!-- BUTTON 2: Return to Archive Link Example -->
+    <a href="index.html" class="cyber-button-container">
+        <div class="lottie-hardware-bg" data-animation="cyber-circuit"></div>
+        <!-- AUTOMATED CUSTOM TEXT EXAMPLE -->
+        <span class="cyber-button-text">LAUNCH 1999 NODE</span>
+    </a>
+
+    <script>
+        // Automated script initialization loops over your buttons on page load
+        document.querySelectorAll('.lottie-hardware-bg').forEach(container => {
+            lottie.loadAnimation({
+                container: container,
+                renderer: 'svg', // Forces razor-sharp mathematical vectors instead of pixels
+                loop: true,
+                autoplay: true,
+                // Loads an official, public domain futuristic tech wireframe grid
+                path: 'https://lottiefiles.com' 
+            });
+        });
+    </script>
+
+</body>
+</html>
