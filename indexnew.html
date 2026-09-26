@@ -81,6 +81,30 @@
             color: #ffffff; /* Text turns pure white for maximum readability inside the button */
             text-shadow: 0 0 8px #00ff00, 0 0 20px #00ff00; /* Intensifies the green matrix glare behind it */
         }
+
+/* Core Structural Layout Rules for the Footer Container */
+.site-corporate-footer {
+    width: 100%;
+    margin-top: 60px; /* Pushes it cleanly below your central table elements */
+    padding: 20px 0;
+    clear: both;      /* Safely forces it to break away from tables above it */
+    text-align: center;
+}
+
+.footer-content-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.copyright-text, .trademark-text {
+    font-family: Arial, sans-serif;
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: #888888; /* Soft grey text so it stays elegant and out of the way */
+    margin: 4px 0;
+}
+
     </style>
 
 </head>
@@ -114,6 +138,18 @@
             });
         });
     </script>
+
+<!-- THE PROPER SEMANTIC HTML5 FOOTER CONTAINER -->
+<footer class="site-corporate-footer">
+    <div class="footer-content-wrapper">
+        <p class="copyright-text">
+            Copyright &copy; 1994&ndash;<script>document.write(new Date().getFullYear());</script> EnternetGlobal LLC. All Rights Reserved.
+        </p>
+        <p class="trademark-text">
+            EnternetGlobal&trade;, EntertainmentGiant&trade;, and EG2CENTER&trade; are trademarks of EnternetGlobal LLC.
+        </p>
+    </div>
+</footer>
 
 </body>
 </html>

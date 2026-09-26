@@ -177,6 +177,30 @@
             50% { transform: scale(1.05); filter: drop-shadow(0 0 22px rgba(255, 255, 204, 1)); }
             100% { transform: scale(0.96); filter: drop-shadow(0 0 2px rgba(255, 255, 204, 0.3)); }
         }
+
+/* Core Structural Layout Rules for the Footer Container */
+.site-corporate-footer {
+    width: 100%;
+    margin-top: 60px; /* Pushes it cleanly below your central table elements */
+    padding: 20px 0;
+    clear: both;      /* Safely forces it to break away from tables above it */
+    text-align: center;
+}
+
+.footer-content-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.copyright-text, .trademark-text {
+    font-family: Arial, sans-serif;
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: #888888; /* Soft grey text so it stays elegant and out of the way */
+    margin: 4px 0;
+}
+
     </style>
 </head>
 
@@ -240,7 +264,7 @@ Click above to go to our new modern EG2Center website.<br>
         <h2>CLASSIC E.G.2 CENTER</h2>
 <br>
  <a href="indexmajor.htm"  class="pulse-subtle">
-<img src="graphics/eg2_green2.gif" alt="click here to rediscover the classic 1999 center">
+<img src="graphics/eg2_green2.gif" alt="Click here to rediscover the classic 1999 center. Go wayback in history to the first CENTER.">
  <alt="Enter the center ................. of the Enternet Global Center"></a><br>
             <!-- The Image Button Optimized for SEO with clean alt tags -->
             <a href="indexmajor.htm" class="pulse-subtle">
@@ -252,8 +276,7 @@ Click above to go to our new modern EG2Center website.<br>
     </a>
 </div>
 <br><br>
-            <a href="indexmajor.htm" class="enter-link">Go wayback in history to the first CENTER</a>
-            <p style="color: #21ADA8; font-size: 0.9rem; margin-top: 5px;">(time-traveling wayback 27 years to original 1999-2000 flat-index site archive)</p>
+            <p style="color: #21ADA8; font-size: 0.9rem; margin-top: 5px;">time-traveling wayback 27 years to original 1999-2000 flat-index site archive</p>
         <p><em>historical digital Preservation Protocol</em></p>
 <br><br>
         </div>
@@ -290,6 +313,12 @@ Click above to go to our new modern EG2Center website.<br>
         </div>
 
 <!-- Responsive Footer Wrapper -->
+<p style="font-family: Arial, sans-serif; font-size: 0.85rem; color: #888888; text-align: center; line-height: 1.6;">
+    Copyright &copy; 1994&ndash;<script>document.write(new Date().getFullYear());</script> Enternet Global Center (EG2CENTER). All Rights Reserved.<br>
+    EnternetGlobal&trade; and EntertainmentGiant&trade; are registered trademarks of our legacy digital ecosystem network footprint.
+</p>
+
+
 <div style="width: 100%; max-width: 100%; box-sizing: border-box; padding: 10px; text-align: center; clear: both;">
     <a href="enternetglobal-index.htm"  class="pulse-subtle"> <img src="graphics/eg2center-ENTERNETGLOBAL-profile_header.gif" width="100%" alt="Footer Logo"></a>
 </div>
@@ -321,6 +350,19 @@ Click above to go to our new modern EG2Center website.<br>
 <br>
 (for digital identification of human beings and their creative works)
 </p>
+
+<!-- THE PROPER SEMANTIC HTML5 FOOTER CONTAINER -->
+<footer class="site-corporate-footer">
+    <div class="footer-content-wrapper">
+        <p class="copyright-text">
+            Copyright &copy; 1994&ndash;<script>document.write(new Date().getFullYear());</script> EnternetGlobal LLC. All Rights Reserved.
+        </p>
+        <p class="trademark-text">
+            EnternetGlobal&trade;, EntertainmentGiant&trade;, and EG2CENTER&trade; are trademarks of EnternetGlobal LLC.
+        </p>
+    </div>
+</footer>
+
 
 </body>
 </html>
